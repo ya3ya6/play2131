@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  deploy:
+    container_name: wolfelabs-dev
+    image: wolfelabs/dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      VIRTUAL_HOST: dev.wolfelabs.tech
+      LETSENCRYPT_HOST: dev.wolfelabs.tech
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

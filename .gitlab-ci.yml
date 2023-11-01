@@ -1,0 +1,17 @@
+image: docker/compose:latest
+
+stages:
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+deploy-portfolio:
+  stage: deploy
+  script:
+    - docker-compose up -d --build
+  only:
+    - develop
+  tags:
+    - docker-runner

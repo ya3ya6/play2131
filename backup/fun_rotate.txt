@@ -1,0 +1,9 @@
+let r = 0;
+setInterval(() => {
+  r += (Math.PI * 2) / 360;
+  let r2 = r * ((2 * Math.PI) / 360);
+  if(r2 > (2 * Math.PI)){
+    r2 = r2 - (2 * Math.PI);
+  }
+  wolfe.rotateY(r2);
+}, 30);
