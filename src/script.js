@@ -343,7 +343,7 @@ const loadingManager = new THREE.LoadingManager(
         ease: "power4.inOut",
         delay: 15.6 * speedGsap,
         duration: 4 * speedGsap,
-        fov: 100,
+        fov: 23,
         onUpdate: () => {
           camera.updateProjectionMatrix();
         },
